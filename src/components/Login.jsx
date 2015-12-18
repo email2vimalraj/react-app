@@ -18,14 +18,10 @@ class Login extends Component {
   render() {
     return(
       <div>
-        <div className="row">
-          <div className="col-md-4" style={{"backgroundColor": "green"}}>
-            <p>Hello, </p>
-          </div>
+        <div className="menu-toggler sidebar-toggler"></div>
 
-          <div className="col-md-8" style={{"backgroundColor": "red"}}>
-            <p>World!</p>
-          </div>
+        <div className="logo">
+            <h3 style={{"color": "#4DB3A5"}}>PARSONS PROBLEMS</h3>
         </div>
       </div>
     );
