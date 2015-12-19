@@ -34,6 +34,11 @@ module.exports = {
     module: {
         loaders: [
 
+          // Font and images
+          { test: /\.((woff2?|svg)(\?v=[0-9]\.[0-9]\.[0-9]))|(woff2?|svg|jpe?g|png|gif|ico)$/, loader: 'url?limit=10000' },
+          { test: /\.((ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9]))|(ttf|eot)$/, loader: 'file' },
+          // { test: /\.(jpe?g|png|gif|ico)$/, loader: 'url?limit=10000' },
+
           // React is necessary for the client rendering
           { test: require.resolve('jquery-ujs'), loader: 'imports?jQuery=jquery' },
           { test: require.resolve('jquery'), loader: 'expose?jQuery' },
@@ -63,10 +68,6 @@ module.exports = {
                 loader: 'style!css!sass'
             },
 
-            // Font and images
-            { test: /\.(woff2?|svg)$/, loader: 'url?limit=10000' },
-            { test: /\.(ttf|eot)$/, loader: 'file' },
-            { test: /\.(jpe?g|png|gif|svg|ico)$/, loader: 'url?limit=10000' }
         ]
     }
 }

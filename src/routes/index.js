@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from '../components/App.jsx';
 import Login from '../components/Login.jsx';
+import Signup from '../components/Signup.jsx';
+import ForgotPassword from '../components/ForgotPassword.jsx';
 import {Router, Route, IndexRoute} from 'react-router';
 
 // let Route = Router.Route;
@@ -12,6 +14,8 @@ let routes = (
     <IndexRoute component={Login} />
 
     <Route path="login" component={Login} />
+    <Route path="signup" component={Signup} />
+    <Route path="forgotpassword" component={ForgotPassword} />
   </Route>
 );
 
